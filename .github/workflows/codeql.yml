@@ -91,13 +91,11 @@ jobs:
           -H "X-GitHub-Api-Version: 2022-11-28" \
           https://api.github.com/repos/JackConroySunLife/Go-GRPC-Project/code-scanning/alerts)
 
-        output=$alerts | jq '. | length'
-        echo $output | jq '.length'
-
         echo "Alerts: ${alerts}"
 
         for row in "$(echo "${alerts}" | jq -r '.[]')"; do
           state=$(echo "${row}" | jq -r '.state')
+          echo "STATE: ${state}"
           if [ "${state}" == "open" ]; then
             echo "State is open"
           else
