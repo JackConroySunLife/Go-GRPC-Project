@@ -93,8 +93,7 @@ jobs:
         echo "Alerts: $alerts"
         for row in $(echo "($alerts)" | jq -c '.[]'); do
           state=$(echo "$(row)" | jq -r '.state')
-
-          if [ "${state}" == "open"]; then
+          if [ "${state}" == "open" ]; then
             echo "State is open"
           else
             echo "State is not open"
