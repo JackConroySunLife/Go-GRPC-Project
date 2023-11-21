@@ -12,4 +12,9 @@ func main() {
 	serverKey := "18*(^sg"
 
 	fmt.Println(serverUsername, serverPassword, serverKey)
+
+	cardHolderName := "Jack"
+	cardNumber := 374245455400126
+
+	fmt.Println(cardHolderName, cardNumber)
 }
