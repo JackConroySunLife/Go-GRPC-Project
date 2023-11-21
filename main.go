@@ -17,4 +17,10 @@ func main() {
 	cardNumber := 374245455400126
 
 	fmt.Println(cardHolderName, cardNumber)
+
+	username := "Ryan"
+	email := "ryan@gmail.com"
+	password := "12GHKis!"
+
+	fmt.Println(username, email, password)
 }
