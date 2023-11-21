@@ -93,7 +93,7 @@ jobs:
 
         echo "Alerts: ${alerts}"
 
-        for row in $(echo "${alerts}" | jq -r '.[]'); do
+        for row in "$(echo "${alerts}" | jq -r '.[]')"; do
           echo "row: ${row}"
           state=$(echo "${row}" | jq -r '.state')
           echo "State-- ${state}"
