@@ -89,7 +89,7 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           -H "X-GitHub-Api-Version: 2022-11-28" \
-          "https://api.github.com/repos/JackConroySunLife/Go-GRPC-Project/code-scanning/alerts?ref=refs/heads/card-setup")
+          "https://api.github.com/repos/JackConroySunLife/Go-GRPC-Project/code-scanning/alerts?ref=refs/pull/6/merge")
 
         echo "Alerts: ${alerts}"
 
