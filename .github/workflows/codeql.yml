@@ -100,6 +100,6 @@ jobs:
           state=$(echo "${row}" | jq -c '.state')
           number=$(echo "$row" | jq -r '.number')
           for item in "$(echo "${row}" | jq -c '.[]')"; do
-            state=$(echo "${item}" | jq -c '.state')
+            echo "ITEM: ${item}"
           done
         done
