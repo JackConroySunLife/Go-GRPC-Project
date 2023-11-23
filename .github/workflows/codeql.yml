@@ -96,4 +96,9 @@ jobs:
 
         result=$(echo "$alerts" | jq -r '.[].state')
 
-        echo "$result"
+       for status in "${result}"; do
+        if [ "$status" == "open" ]; then
+          echo "Status is open"
+          break
+        fi
+      done
