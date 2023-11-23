@@ -99,5 +99,5 @@ jobs:
         for obj in $(jq -c '.[]' "$alerts"); do
           state=$(echo "$obj" | jq -r '.state')
 
-          echo "State: $state"
+          echo "Hello"
         done
