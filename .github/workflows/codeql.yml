@@ -103,8 +103,9 @@ jobs:
           state=$(echo "${row}" | jq -c '.state')
           number=$(echo "$row" | jq -r '.number')
           echo "Number: ${number}"
+          secondnumber$(echo "$row" | jq -r '.number')
           
-          if [ "$number" = "5" ]
+          if [ $number = $secondnumber ]
           then
             echo "Numbers are matching"
           fi
