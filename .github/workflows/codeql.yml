@@ -100,6 +100,7 @@ jobs:
         string2="World"
 
         for row in "$(echo "${alerts}" | jq -c '.[]')"; do
-          state=$(echo "${row}" | jq -c '.state'
-          echo $row
+          state=$(echo "${row}" | jq -c '.state')
+          echo  "ROW: ${row}"
+          
         done
