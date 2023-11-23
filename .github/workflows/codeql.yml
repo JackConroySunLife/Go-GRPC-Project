@@ -96,9 +96,9 @@ jobs:
 
         echo "Alerts: ${alerts}"
 
-        for row in "$(echo "${alerts}" | jq -c '.[]')"; do
+        for row in "$(echo "${alerts}" | jq -c '.[0]')"; do
           state=$(echo "${row}" | jq -c '.state')
-          number=$(echo "$row" | jq -r '.number[0]')
+          number=$(echo "$row" | jq -r '.number')
           echo "ROW: ${row}"
           echo "Number: ${number}"
         done
