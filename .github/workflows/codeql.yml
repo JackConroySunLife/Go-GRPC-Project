@@ -97,5 +97,6 @@ jobs:
         result=$(echo "$alerts" | jq -r '.[].state')
 
         for status in "${result}"; do
-          printf "[%s]\n" "$status"
+          cleaned=$(echo "$status" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          printf "[%s]\n" "$cleaned"
         done
