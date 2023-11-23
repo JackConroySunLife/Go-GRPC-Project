@@ -102,7 +102,7 @@ jobs:
           if [ "${state}" == "open" ]; then
             echo "Hello"
           else
-            echo "STATE: ${state}"
+            echo "STATE: ${state} else"
             echo "State is not open"
           fi
         done
