@@ -99,8 +99,8 @@ jobs:
         string1="Hello"
         string2="World"
 
-        for row in "$(echo "${alerts}" | jq -r '.[]')"; do
-          state=$(echo "${row}" | jq -r '.state')
+        for row in "$(echo "${alerts}" | jq -c '.[]')"; do
+          state=$(echo "${row}" | jq -c '.state')
           echo "${state}"
           echo $row
           echo "Hellow"
