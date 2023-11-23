@@ -104,4 +104,9 @@ jobs:
           number=$(echo "$row" | jq -r '.number')
           echo "Number: ${number}"
           
+          if "$number" = "5"
+          then
+            echo "Numbers are matching"
+          fi
+
         done
