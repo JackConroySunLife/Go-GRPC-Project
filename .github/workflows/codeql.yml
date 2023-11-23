@@ -98,6 +98,10 @@ jobs:
 
         echo "$result"
 
+        if [ "$result" == "" ]; then
+          echo "Empty"
+        fi
+
         for status in "${result}"; do
           echo "Status is: ${status}"
         done
