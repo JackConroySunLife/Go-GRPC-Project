@@ -102,5 +102,6 @@ jobs:
         for row in "$(echo "${alerts}" | jq -c '.[]')"; do
           state=$(echo "${row}" | jq -c '.state')
           number=$(echo "$row" | jq -r '.number')
+          echo "Number: ${number}"
           
         done
