@@ -100,8 +100,9 @@ jobs:
         string2="World"
 
         for row in "$(echo "${alerts}" | jq -c '.[]')"; do
-          state=$(echo "${row}" | jq -c '.state')
-          something= echo "${state}"
+          state=$(echo "${row}" | jq -c '.state'
+          echo "${row}"
+          
           if [[ "open" == "open" ]]; then
             echo "It is open"
           fi
