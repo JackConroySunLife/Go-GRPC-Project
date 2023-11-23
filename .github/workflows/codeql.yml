@@ -96,4 +96,8 @@ jobs:
 
         echo "Alerts: ${alerts}"
 
-        echo "$alerts" | jq -r '.[].state'
+        if echo "$alerts" | jq -r '.[].state | select(. == "open") | any' > /dev/null; then
+          echo "open!"
+        else
+          echo "NOPE"
+        fi
