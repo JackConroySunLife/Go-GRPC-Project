@@ -106,7 +106,7 @@ jobs:
           secondnumber=$(echo "$row" | jq -r '.number')
           echo "Second Number: ${secondnumber}"
           
-          if [ "${number}" = "${secondnumber}" ]
+          if [ "${number}" = "5" ]
           then
             echo "Numbers are matching"
           fi
