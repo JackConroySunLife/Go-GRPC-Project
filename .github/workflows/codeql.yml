@@ -103,7 +103,7 @@ jobs:
           state=$(echo "${row}" | jq -c '.state')
           echo "${state}"
           something= echo "${state}"
-          if [[ "open" == something ]]; then
+          if [[ "open" == "open" ]]; then
             echo "It is open"
           fi
         done
