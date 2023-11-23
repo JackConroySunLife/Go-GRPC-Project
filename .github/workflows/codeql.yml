@@ -96,18 +96,8 @@ jobs:
 
         echo "Alerts: ${alerts}"
 
-        string1="Hello"
-        string2="World"
-
         for row in "$(echo "${alerts}" | jq -c '.[]')"; do
           state=$(echo "${row}" | jq -c '.state')
           number=$(echo "$row" | jq -r '.number')
-          echo "Number: ${number}"
-          secondnumber=$(echo "$row" | jq -r '.number')
-          echo "Second Number: ${secondnumber}"
-          
-          if [ "${number}" = "${secondnumber}" ]
-          then
-            echo "Numbers are matching"
-          fi
+          echo "ROW: ${row}"
         done
