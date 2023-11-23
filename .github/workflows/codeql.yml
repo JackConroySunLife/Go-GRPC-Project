@@ -99,7 +99,7 @@ jobs:
         for row in "$(echo "${alerts}" | jq -r '.[]')"; do
           state=$(echo "${row}" | jq -r '.state')
           echo "STATE: ${state}"
-          if [ $state="open" ]; then
+          if ["h" = "h"]; then
             echo "Hello"
           else
             echo "STATE: ${state} else"
