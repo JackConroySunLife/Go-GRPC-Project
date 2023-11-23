@@ -99,7 +99,6 @@ jobs:
         for row in "$(echo "${alerts}" | jq -c '.[]')"; do
           state=$(echo "${row}" | jq -c '.state')
           number=$(echo "$row" | jq -r '.number')
-          for item in "$(echo "${row}" | jq -c '.[]')"; do
-            echo "ITEM: ${item}"
-          done
+ 
+          echo "ROW: ${row}"
         done
