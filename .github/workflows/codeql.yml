@@ -99,4 +99,10 @@ jobs:
         for status in "${result}"; do
           cleaned=$(echo "$status" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
           printf "[%s]\n" "$cleaned"
+
+          if [ "$cleaned" == "open" ]; then
+            echo "Status Open"
+          else
+            echo "Status closed"
+          fi
         done
