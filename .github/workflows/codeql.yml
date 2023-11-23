@@ -96,7 +96,14 @@ jobs:
 
         echo "Alerts: ${alerts}"
 
+        string1="Hello"
+        string2="World"
+
         for row in "$(echo "${alerts}" | jq -r '.[]')"; do
           state=$(echo "${row}" | jq -r '.state')
           echo "${state}"
+
+          if [ "$string1" != "$string2" ]; then
+            echo "The strings are not equal."
+          fi
         done
