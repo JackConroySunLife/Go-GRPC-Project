@@ -95,14 +95,3 @@ jobs:
           "https://api.github.com/repos/JackConroySunLife/Go-GRPC-Project/code-scanning/alerts?state=open&ref=refs/pull/$PR_NUMBER/merge")
 
         echo "Alerts: ${alerts}"
-
-        for row in "$(echo "${alerts}" | jq -r '.[]')"; do
-          state=$(echo "${row}" | jq -r '.state')
-          echo "STATE: ${state}"
-          if ["h" = "h"]; then
-            echo "Hello"
-          else
-            echo "STATE: ${state} else"
-            echo "State is not open"
-          fi
-        done
