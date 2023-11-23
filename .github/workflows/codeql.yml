@@ -97,5 +97,5 @@ jobs:
         result=$(echo "$alerts" | jq -r '.[].state')
 
         for status in "${result}"; do
-          echo "$status"
+          printf "[%s]\n" "$status"
         done
