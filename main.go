@@ -23,4 +23,10 @@ func main() {
 	password := "12GHKis!"
 
 	fmt.Println(username, email, password)
+
+	firstName := "Jack"
+	lastName := "Conroy"
+	UserCardNumber := 374245455400126
+
+	FinanceAPIKey := "eu248hefbewgb!"
 }
