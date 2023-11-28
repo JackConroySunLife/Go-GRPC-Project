@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+type BankDetails struct {
+	Name   string
+	Pin    string
+	Active bool
+}
+
 func main() {
 	apiKey := "key314trwgobjbyyc"
 
@@ -23,4 +29,12 @@ func main() {
 	password := "12GHKis!"
 
 	fmt.Println(username, email, password)
+
+	usersBankDetails := BankDetails{
+		Name:   "Jack",
+		Pin:    "2123345678",
+		Active: true,
+	}
+
+	fmt.Println(usersBankDetails)
 }
